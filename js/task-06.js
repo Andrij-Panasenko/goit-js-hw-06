@@ -8,11 +8,11 @@ function onFocusChange(event) {
     // довжина введеного рядка
     const inputContentLength = inputField.value.length  
     
-    if (inputContentLength >= symbolLength) {
+    if (inputContentLength === Number(symbolLength)) {
         inputField.classList.remove('invalid')
-       inputField.classList.add('valid')
+        inputField.classList.add('valid')
     } else {
         inputField.classList.remove('valid');
         inputField.classList.add('invalid')
     }
-}
+};
