@@ -14,11 +14,14 @@ const images = [
 ];
 
 const galleryList = document.querySelector(".gallery");
+const markupArray = [];
 
 images.forEach(({ url, alt }) => {
   const markup = `<li>
-  <img src="${url} alt="${alt}" width="400">
+  <img src="${url}" alt="${alt}" width="400">
   </li>`;
-  galleryList.insertAdjacentHTML("beforeend", markup)
+  markupArray.push(markup);
 })
 
+
+galleryList.insertAdjacentHTML("beforeend", markupArray.join(''))
